@@ -1,0 +1,103 @@
+/* on importe les polices d'écriture qui seront sur le site */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+
+/* on défini la version mobile et tablettes et l'affichage des pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* pour enlever le soulignement des liens */
+a {
+    text-decoration: none;
+}
+
+/* pour définir la police du site */
+body {
+    background-color: #e8c1c1;
+    font-family: 'Open Sans',
+        sans-serif;
+    margin: 5;
+}
+
+/* on enleve les liens réservés à la version ordinateur */
+.links {
+    display: none;
+}
+
+/* pour afficher le menu burger ainsi que les inscriptions en version mobile */
+.menu-burger {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+#hamburger-logo {
+    cursor: pointer;
+    background: #e8c1c1;;
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #858585;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    overflow: hidden;
+}
+
+.mobile-menu a {
+    color: pink;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.mobile-menu a:hover {
+    background: #444;
+}
+
+#hamburger:checked~.mobile-menu {
+    display: flex;
+}
+
+#hamburger {
+    display: none;
+}
+/* pour la version ordinateur */
+@media screen and (min-width: 1025px) {
+/* pour afficher la nav la couleur et les liens en ordi */
+    .links {
+        background-color: grey;
+        /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
+
+        height: 7vh;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        font-family: "Blinker", sans-serif;
+        font-weight: bold;
+    }
+/* couleur des inscriptions de la nav */
+    .links li a {
+        color: #e8c1c1;
+        padding: 10px;
+    }
+/* on enlève la version mobile on fait qu'elle ne soit pas visible */
+    .menu-burger {
+        display: none;
+    }
+}
