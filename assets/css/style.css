@@ -10,6 +10,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* général */
 /* pour enlever le soulignement des liens */
 a {
     text-decoration: none;
@@ -17,33 +19,46 @@ a {
     color: #ffffff;
 }
 
-/* pour définir la police du site et créer un fond original*/
-body {
-   /* Un dégradé avec plusieurs arrêts de couleur :un dégradé incliné de 45 degrés commençant en bas à
-      gauche avec une moitié taupe et avec une moitié dorée en haut à droite où une ligne dure marque le
-      changement entre taupe et doré */
-   background: linear-gradient(45deg, #bdaba0 0 50%, #e8c1c1 50% 100%);
-    font-family: 'Open Sans',
-        sans-serif;
-    color: #000000;
+/* pour mettre des marges */
 
-}
-p{
+p {
     padding: 1%;
     margin-left: 4px;
 }
 
-ul{
+ul {
     padding: 1%;
     margin-left: 2%;
 }
-h2{
+
+h1 {
+    font-family: 'Beth Ellen', cursive;
+}
+
+h2 {
     margin-left: 5%;
     margin: 2%;
     font-weight: bold;
     font-family: "Blinker", sans-serif;
 }
 
+h3 {
+    font-family: 'Blinker', sans-serif;
+}
+
+/* pour définir la police du site et créer un fond original*/
+body {
+    /* Un dégradé avec plusieurs arrêts de couleur :un dégradé incliné de 45 degrés commençant en bas à
+      gauche avec une moitié taupe et avec une moitié dorée en haut à droite où une ligne dure marque le
+      changement entre taupe et doré */
+    background: linear-gradient(45deg, #bdaba0 0 50%, #e8c1c1 50% 100%);
+    font-family: 'Open Sans',
+        sans-serif;
+    color: #000000;
+
+}
+
+/* nav et menu burger */
 /* on enleve les liens réservés à la version ordinateur */
 .links {
     display: none;
@@ -95,21 +110,30 @@ h2{
 #hamburger {
     display: none;
 }
+
+/* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
+footer {
+    background: #dbcba9;
+    color: #808080;
+}
+
 /* pour la version ordinateur */
 @media screen and (min-width: 1025px) {
-/* pour afficher la nav la couleur et les liens en ordi */
-    nav{
+
+    /* pour afficher la nav la couleur et les liens en ordi */
+    nav {
         background-color: #808080;
         height: 7vh;
     }
+
     body {
         /* pour créer une bande dorée sur le côté gauche de l'écran et taupe à droite */
-        background: linear-gradient(
-          to right,
-          #dbcba9 20%,
-          #bdaba0 20% 80%
-        );
-      }
+        background: linear-gradient(to right,
+                #dbcba9 20%,
+                #bdaba0 20% 80%);
+    }
+
+    /* nav  */
     .links {
 
         /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
@@ -122,13 +146,21 @@ h2{
         font-family: "Blinker", sans-serif;
         font-weight: bold;
     }
-/* couleur des inscriptions de la nav */
+
+    /* couleur des inscriptions de la nav */
     .links li a {
         color: #e8c1c1;
         padding: 10px;
     }
-/* on enlève la version mobile on fait qu'elle ne soit pas visible */
+
+    /* on enlève la version mobile on fait qu'elle ne soit pas visible */
     .menu-burger {
         display: none;
+    }
+
+    /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
+    footer {
+        background: #808080;
+        color: #e8c1c1;
     }
 }
