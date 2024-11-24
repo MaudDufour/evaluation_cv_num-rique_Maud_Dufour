@@ -33,28 +33,37 @@ ul {
 
 h1 {
     font-family: 'Beth Ellen', cursive;
-}
-
-h2 {
+    display: flex;
+    justify-content: center;
     margin-left: 5%;
     margin: 2%;
     font-weight: bold;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    padding: 2%;
     font-family: "Blinker", sans-serif;
 }
 
 h3 {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    padding: 2%;
+    font-weight: bold;
     font-family: 'Blinker', sans-serif;
 }
 
 /* pour définir la police du site et créer un fond original*/
 body {
-    /* Un dégradé avec plusieurs arrêts de couleur :un dégradé incliné de 45 degrés commençant en bas à
-      gauche avec une moitié taupe et avec une moitié dorée en haut à droite où une ligne dure marque le
-      changement entre taupe et doré */
+    /* Un dégradé avec plusieurs arrêts de couleur :un dégradé incliné de 45 degrés commençant en bas à gauche avec une moitié taupe et avec une moitié dorée en haut à droite où une ligne dure marque le changement entre taupe et doré */
     background: linear-gradient(45deg, #bdaba0 0 50%, #e8c1c1 50% 100%);
     font-family: 'Open Sans',
         sans-serif;
-    color: #000000;
+    color: #ffffff;
 
 }
 
@@ -111,6 +120,37 @@ body {
     display: none;
 }
 
+/* pour centrer l image dans le cadre rose */
+.left-side #portait img {
+    height: 80%;
+    width: 80%;
+    margin: 10%;
+    padding: 5%;
+}
+
+/* pour espacer l affichage des informations de contact */
+#contact div {
+    padding: 3% 18%;
+    display: flex;
+    flex-basis: auto;
+}
+
+/* pour espacer les langues  */
+.speaking p {
+    margin-left: 18%;
+}
+
+/* pour espacer la liste */
+.values ul {
+    margin-left: 18%;
+}
+
+/* pour espacer les items de loisir  */
+.draw_activities {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
 footer {
     background: #dbcba9;
@@ -156,6 +196,28 @@ footer {
     /* on enlève la version mobile on fait qu'elle ne soit pas visible */
     .menu-burger {
         display: none;
+    }
+
+    /* pour le cadre gauche on le décolle et le colore */
+    .left-side {
+        margin: 4%;
+        width: 30%;
+        background: #e8c1c1;
+    }
+
+    /* pour espacer l affichage des informations de contact */
+    #contact div {
+        padding: 3% 10%;
+    }
+
+    /* pour espacer les langues  */
+    .speaking p {
+        margin-left: 10%;
+    }
+
+    /* pour espacer la liste */
+    .values ul {
+        margin-left: 12%;
     }
 
     /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
