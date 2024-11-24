@@ -13,14 +13,35 @@
 /* pour enlever le soulignement des liens */
 a {
     text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-/* pour définir la police du site */
+/* pour définir la police du site et créer un fond original*/
 body {
-    background-color: #e8c1c1;
+   /* Un dégradé avec plusieurs arrêts de couleur :un dégradé incliné de 45 degrés commençant en bas à
+      gauche avec une moitié taupe et avec une moitié dorée en haut à droite où une ligne dure marque le
+      changement entre taupe et doré */
+   background: linear-gradient(45deg, #bdaba0 0 50%, #e8c1c1 50% 100%);
     font-family: 'Open Sans',
         sans-serif;
-    margin: 5;
+    color: #000000;
+
+}
+p{
+    padding: 1%;
+    margin-left: 4px;
+}
+
+ul{
+    padding: 1%;
+    margin-left: 2%;
+}
+h2{
+    margin-left: 5%;
+    margin: 2%;
+    font-weight: bold;
+    font-family: "Blinker", sans-serif;
 }
 
 /* on enleve les liens réservés à la version ordinateur */
@@ -38,7 +59,7 @@ body {
 
 #hamburger-logo {
     cursor: pointer;
-    background: #e8c1c1;;
+    background: #e8c1c1;
     width: 50px;
     text-align: center;
     padding: 10px;
@@ -49,7 +70,7 @@ body {
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: #858585;
+    background: #e8c1c1;
     position: absolute;
     top: 50px;
     left: 0;
@@ -58,7 +79,7 @@ body {
 }
 
 .mobile-menu a {
-    color: pink;
+    color: #ffffff;
     padding: 10px;
     transition: background 0.3s;
 }
@@ -77,11 +98,21 @@ body {
 /* pour la version ordinateur */
 @media screen and (min-width: 1025px) {
 /* pour afficher la nav la couleur et les liens en ordi */
-    .links {
-        background-color: grey;
-        /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
-
+    nav{
+        background-color: #808080;
         height: 7vh;
+    }
+    body {
+        /* pour créer une bande dorée sur le côté gauche de l'écran et taupe à droite */
+        background: linear-gradient(
+          to right,
+          #dbcba9 20%,
+          #bdaba0 20% 80%
+        );
+      }
+    .links {
+
+        /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
         font-size: 1.4rem;
         display: flex;
         flex-direction: row;
