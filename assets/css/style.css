@@ -23,12 +23,12 @@ a {
 
 p {
     padding: 1%;
-    margin-left: 4px;
+    margin-left: 5%
 }
 
 ul {
     padding: 1%;
-    margin-left: 2%;
+    margin-left: 5%;
 }
 
 h1 {
@@ -44,7 +44,7 @@ h1 {
 h2 {
     display: flex;
     justify-content: center;
-    margin: 2%;
+    margin: 4%;
     padding: 2%;
     font-family: "Blinker", sans-serif;
 }
@@ -83,6 +83,7 @@ body {
 }
 
 #hamburger-logo {
+    position: fixed;
     cursor: pointer;
     background: #e8c1c1;
     width: 50px;
@@ -93,6 +94,7 @@ body {
 }
 
 .mobile-menu {
+    position: fixed;
     display: none;
     flex-direction: column;
     background: #e8c1c1;
@@ -114,11 +116,37 @@ body {
 }
 
 #hamburger:checked~.mobile-menu {
+    position: fixed;
     display: flex;
 }
 
 #hamburger {
+    position: fixed;
     display: none;
+}
+
+/* création de blocs effets bouton pour les compétences maitrisées*/
+.skills p {
+    background: #bdaba0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* création de blocs effets bouton pour les compétences en apprentissage*/
+.dev_skills p {
+    background: #dbcba9;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
 }
 
 /* pour centrer l image dans le cadre rose */
@@ -171,8 +199,10 @@ footer {
 
     /* pour afficher la nav la couleur et les liens en ordi */
     nav {
+        position: fixed;
         background-color: #808080;
         height: 7vh;
+        width: 100%;
     }
 
     body {
@@ -183,8 +213,8 @@ footer {
     }
 
     /* nav  */
-    .links {
 
+    .links {
         /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
         font-size: 1.4rem;
         display: flex;
