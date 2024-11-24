@@ -41,14 +41,17 @@ h1 {
     font-size: 3rem;
 }
 
+/* définition de l'affichage des titres police vignette centrer*/
 h2 {
-    display: flex;
-    justify-content: center;
-    margin: 4%;
-    padding: 2%;
+    background: #dbcba9;
+    margin: 10%;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
     font-family: "Blinker", sans-serif;
 }
 
+/* définition de l'affichage des titres police centrer */
 h3 {
     display: flex;
     justify-content: center;
@@ -139,7 +142,7 @@ body {
 
 /* création de blocs effets bouton pour les compétences en apprentissage*/
 .dev_skills p {
-    background: #dbcba9;
+    background: #a39b89;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 3%;
@@ -190,12 +193,21 @@ body {
 
 /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
 footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
     background: #dbcba9;
     color: #808080;
 }
 
 /* pour la version ordinateur */
 @media screen and (min-width: 1025px) {
+
+    h2 {
+        background: #808080;
+    }
 
     /* pour afficher la nav la couleur et les liens en ordi */
     nav {
@@ -244,6 +256,11 @@ footer {
         width: 30%;
         background: #e8c1c1;
         height: auto;
+    }
+
+    /* changer la couleur du fond des titres dans le cadre rose */
+    .left-side h2 {
+        background: #bdaba0;
     }
 
     /* pour espacer l affichage des informations de contact */
@@ -325,6 +342,8 @@ footer {
 
     /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
     footer {
+        display: flex;
+        justify-content: space-around;
         background: #808080;
         color: #e8c1c1;
     }
