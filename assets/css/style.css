@@ -36,8 +36,9 @@ h1 {
     display: flex;
     justify-content: center;
     margin-left: 5%;
-    margin: 2%;
+    margin: 5%;
     font-weight: bold;
+    font-size: 3rem;
 }
 
 h2 {
@@ -151,6 +152,14 @@ body {
     justify-content: space-around;
 }
 
+/* pour centrer les images et vidéos en version téléphone et tablette */
+#designs div {
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
 footer {
     background: #dbcba9;
@@ -200,9 +209,11 @@ footer {
 
     /* pour le cadre gauche on le décolle et le colore */
     .left-side {
+        display: block;
         margin: 4%;
         width: 30%;
         background: #e8c1c1;
+        height: auto;
     }
 
     /* pour espacer l affichage des informations de contact */
@@ -218,6 +229,68 @@ footer {
     /* pour espacer la liste */
     .values ul {
         margin-left: 12%;
+    }
+
+    /* pour créer une grille allignée à droite avec les informations */
+    .right-side {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        grid-template-rows: auto;
+        justify-content: end;
+        align-content: start;
+        grid-template-areas:
+            "name name"
+            "me me"
+            "professional-experience professional-experience"
+            "studies studies"
+            "skill skill"
+            "skills dev_skills";
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    #me {
+        grid-area: me;
+    }
+
+    #professional-experience {
+        grid-area: professional-experience;
+    }
+
+    #studies {
+        grid-area: studies;
+    }
+
+    .skill {
+        grid-area: skill;
+    }
+
+    .skills {
+        grid-area: skills;
+
+    }
+
+    /* création de blocs effets bouton pour les compétences maitrisées*/
+    .skills p {
+        grid-area: skills;
+        background: #e8c1c1;
+        margin: 3%;
+        padding: 5%;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    /* création de blocs effets bouton pour les compétences en apprentissage */
+    .dev_skills p {
+        grid-area: dev_skills;
+        background: #dbcba9;
+        margin: 3%;
+        padding: 5%;
+        border-radius: 20px;
+        text-align: center;
+
     }
 
     /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
