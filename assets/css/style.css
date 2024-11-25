@@ -341,6 +341,14 @@ footer {
 
     }
 
+    /* pour mettre les images à coté quand espace disponible et en dessous  */
+    #designs div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
     /* pour définir le footer la couleur du footer ainsi que la couleur du texte*/
     footer {
         display: flex;
